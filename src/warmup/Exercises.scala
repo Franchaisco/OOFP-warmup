@@ -25,7 +25,19 @@ object Exercises {
 
    */
   def indexOfMax(a : Array[Int]) : Int = {
-    0
+    var max : Int = 0
+
+    if(a.isEmpty){
+      max = -1
+    }
+    else {
+      for (i <- a.indices) {
+        if (a(i) > a(max)) {
+          max = i
+        }
+      }
+    }
+      max
   }
 
 
@@ -46,7 +58,22 @@ object Exercises {
   Indication of solution length : 9 lines
    */
   def averageGrade(grades : String) : Double = {
-    0
+    var totalGrades : Int = 0
+    val gradeList : Array[String] = grades.split(" ")
+    var gradesAgg : Double = 0
+
+    for(i <- gradeList.indices)
+      {
+        if(gradeList(i) != "NS")
+          {
+            gradesAgg = gradesAgg + gradeList(i).toDouble
+            totalGrades = totalGrades + 1
+          }
+      }
+      println(gradesAgg)
+      println(totalGrades)
+      println(gradesAgg / totalGrades)
+      gradesAgg / totalGrades
   }
 
     /* Assignment 3:
@@ -85,7 +112,22 @@ object Exercises {
 
 
   def collatzLength(start : Long) : Long = {
-    0
+    var length : Long = 0
+    var curNum : Long = start
+
+    while(curNum != 1)
+      {
+        if(curNum % 2 == 0)
+          {
+            curNum = curNum / 2
+            length = length + 1
+          }
+        else{
+          curNum = curNum * 3 + 1
+          length = length + 1
+        }
+      }
+      length
   }
 
 
@@ -125,7 +167,47 @@ Indication of length : 12 lines
 
 
   def diamondString(height : Int) : String = {
-    ""
+    var diamond : String = ""
+    var result = ""
+    val mid: Int = height / 2
+    var spaceLength : Int = 0
+    var charLength : Int = 0
+    charLength = 1
+
+    if (height % 2 == 1) {
+      spaceLength = mid
+    }
+    else {
+      spaceLength = mid - 1
+    }
+    for(i <- 0 until mid)
+      {
+        val spaceString: String = " " * spaceLength
+        val charString: String = "#" * charLength
+        diamond =  spaceString + charString + "\n"
+        result = result + diamond
+        spaceLength = spaceLength - 1
+        charLength = charLength + 2
+      }
+
+
+
+    for(i <- 0 until (height - mid))
+      {
+        if (height % 2 == 0) {
+          spaceLength = spaceLength + 1
+          charLength = charLength - 2
+        }
+        val spaceString: String = " " * spaceLength
+        val charString: String = "#" * charLength
+        diamond = spaceString + charString + "\n"
+        result = result + diamond
+        if(height % 2 == 1) {
+          spaceLength = spaceLength + 1
+          charLength = charLength - 2
+        }
+      }
+    result
   }
 
 
