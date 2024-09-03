@@ -239,7 +239,21 @@ Indication of length : 7 lines
 
 
   def wordCount(text : String) : mutable.Map[String,Int] = {
-    mutable.Map[String,Int]()
+    var wordMap : mutable.Map[String,Int] = mutable.Map[String, Int]()
+    val wordList = text.toLowerCase().split("(\\s|\\.|,|!)+")
+    for(i <- wordList)
+      {
+        if(wordMap.contains(i))
+          {
+            wordMap(i) = wordMap(i) + 1
+          }
+        else
+        {
+          wordMap += (i -> 1)
+        }
+      }
+      wordMap
+
   }
 
 
@@ -295,6 +309,38 @@ Indication of length 12 added lines
   val eloK = 24
 
   def updateEloScores(players : List[Player] , games : List[Game]) : Unit = {
+    var ratingA = 0.0
+    var ratingB = 0.0
+    var estimateA = 0.0
+    var deltaA = 0.0
+    var deltaB = 0.0
+    var outcomeA = 0.0
+    var outcomeB = 0.0
+
+
+
+    for(game <- games)
+      {
+              ratingA = game.playerA.rating
+              ratingB = game.playerB.rating
+              outcomeA = game.outcome
+              outcomeB = 1 - game.outcome
+
+              estimateA = 1 / (1 + math.pow(10, ((ratingB - ratingA) / 400)))
+
+              deltaA = eloK * (outcomeA - estimateA)
+              deltaB = eloK * (outcomeB - (1 - estimateA))
+
+              game.playerA.rating += deltaA
+              game.playerB.rating += deltaB
+              println(estimateA)
+              println(deltaA)
+              println(deltaB)
+              println(game.playerA.rating)
+              println(game.playerB.rating)
+
+      }
+
   }
 
   class Player(

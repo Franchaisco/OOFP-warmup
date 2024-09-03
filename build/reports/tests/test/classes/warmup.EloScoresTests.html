@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class warmup.EloScoresTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class warmup.EloScoresTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/warmup.html">warmup</a> &gt; EloScoresTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">3</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.123s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">25%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="elo2"></a>
+<h3 class="failures">elo2</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: finalResult was false
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//warmup.EloScoresTests.$anonfun$new$2(EloScoresTests.scala:44)
+	at app//warmup.infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//warmup.infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//warmup.infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//warmup.infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@20.0.2/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@20.0.2/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="elo3"></a>
+<h3 class="failures">elo3</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: finalResult was false
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//warmup.EloScoresTests.$anonfun$new$3(EloScoresTests.scala:72)
+	at app//warmup.infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//warmup.infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//warmup.infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//warmup.infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@20.0.2/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@20.0.2/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="elo4"></a>
+<h3 class="failures">elo4</h3>
+<span class="code">
+<pre>org.scalatest.exceptions.TestFailedException: maxResult was false
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//warmup.EloScoresTests.$anonfun$new$4(EloScoresTests.scala:102)
+	at app//warmup.infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//warmup.infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//warmup.infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//warmup.infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@20.0.2/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base@20.0.2/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">elo1</td>
+<td class="success">0.083s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">elo2</td>
+<td class="failures">0.032s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">elo3</td>
+<td class="failures">0.004s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">elo4</td>
+<td class="failures">0.004s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>0.2402530733520421
+18.23392623955099
+-18.23392623955099
+2018.233926239551
+2181.766073760449
+0.7597469266479578
+5.766073760449012
+-5.766073760449012
+1705.766073760449
+1494.233926239551
+0.14677393267641653
+-3.5225743842339967
+3.522574384233998
+1396.477425615766
+1709.288648144683
+0.6370843561103114
+8.709975453352525
+-8.709975453352525
+1502.9439016929036
+1387.7674501624133
+0.2402530733520421
+18.23392623955099
+-18.23392623955099
+2018.233926239551
+2181.766073760449
+0.9174010690758867
+1.9823743421787192
+-1.9823743421787192
+2601.982374342179
+2179.7836994182703
+0.017277267855695087
+23.585345571463318
+-23.585345571463318
+1923.5853455714632
+2578.3970287707157
+0.36706215627397915
+-8.8094917505755
+8.809491750575498
+1914.7758538208877
+2027.0434179901265
+0.8213480988277366
+4.287645628134321
+-4.287645628134321
+2184.0713450464045
+1910.4882081927535
+0.9598381259624845
+0.9638849769003714
+-0.9638849769003714
+2579.360913747616
+2026.0795330132262
+0.5143871841659987
+-0.3452924199839691
+0.3452924199839691
+2881.654707580016
+2872.345292419984
+0.5292458081725335
+-12.701899396140805
+12.701899396140805
+2859.643393023843
+2864.701899396141
+0.6695894765117131
+-4.070147436281114
+4.070147436281114
+2860.6317519598597
+2746.0701474362813
+0.4697824047320663
+0.7252222864304092
+-0.7252222864304105
+2861.35697424629
+2880.9294852935855
+0.6848848841301566
+-16.43723721912376
+16.43723721912376
+2864.4922480744617
+2762.507384655405
+0.6385379328167472
+-3.324910387601933
+3.324910387601933
+2858.032063858688
+2765.832295043007
+0.6318170910348729
+8.836389815163049
+-8.836389815163049
+2868.479782839006
+2756.995905227844
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at Sep 3, 2024, 1:47:32 PM</p>
+</div>
+</div>
+</body>
+</html>
