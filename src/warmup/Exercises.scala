@@ -555,8 +555,25 @@ Indication of length: 15 lines
             j += 1
           }
         }
-
-
+        else if(a.length > b.length)
+          {
+            c(c.length - 2) = b(b.length - 1)
+            c(c.length - 1) = a(a.length - 1)
+          }
+        else if(b.length > a.length)
+          {
+            c(c.length - 1) = b(b.length - 1)
+            c(c.length - 2) = a(a.length - 1)
+          }
+        else if(b.length == a.length)
+          {
+            if (a() < b(j)) {
+              c(k) = a(i)
+            }
+            else {
+              c(k) = b(j)
+            }
+          }
           println(c.mkString)
         k += 1
       }
