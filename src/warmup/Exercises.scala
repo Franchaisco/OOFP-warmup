@@ -308,39 +308,33 @@ Indication of length 12 added lines
 
   val eloK = 24
 
-  def updateEloScores(players : List[Player] , games : List[Game]) : Unit = {
-    var ratingA = 0.0
-    var ratingB = 0.0
-    var estimateA = 0.0
-    var deltaA = 0.0
-    var deltaB = 0.0
-    var outcomeA = 0.0
-    var outcomeB = 0.0
+  def updateEloScores(players: List[Player], games: List[Game]): Unit = {
+    val updateMap = mutable.Map[String, Double]()
 
+    for (player <- players) {
+      updateMap += (player.name -> player.rating)
+    }
 
+    for (game <- games) {
+      val playerA = game.playerA
+      val playerB = game.playerB
+      val result = game.outcome
 
-    for(game <- games)
-      {
-              ratingA = game.playerA.rating
-              ratingB = game.playerB.rating
-              outcomeA = game.outcome
-              outcomeB = 1 - game.outcome
+      val eA = 1 / (1 + math.pow(10, (playerB.rating - playerA.rating) / 400))
+      val eB = 1 - eA
 
-              estimateA = 1 / (1 + math.pow(10, ((ratingB - ratingA) / 400)))
+      val Aa = 1 - result
 
-              deltaA = eloK * (outcomeA - estimateA)
-              deltaB = eloK * (outcomeB - (1 - estimateA))
+      val delA = eloK * (Aa - eA)
+      val delB = eloK * (result - eB)
 
-              game.playerA.rating += deltaA
-              game.playerB.rating += deltaB
-              println(estimateA)
-              println(deltaA)
-              println(deltaB)
-              println(game.playerA.rating)
-              println(game.playerB.rating)
+      updateMap(playerA.name) += delA
+      updateMap(playerB.name) += delB
+    }
 
-      }
-
+    for (player <- players) {
+      player.rating = updateMap(player.name)
+    }
   }
 
   class Player(
@@ -398,11 +392,66 @@ Make sure to use (names for) constants instead of magic numbers.
   // to convert your speed of type double to an Int use Math.round(speed).toInt
   case class SpeedOffender(licensePlate : String, speed : Int)
 
+  def calcTimeLapsLimit(time : Time) : Double = {
+    val camDistance = 1500.0
+    var speedLimit = 0.0
+    var timeLaps = 0.0
+
+    if (time.hours > 6 && time.hours < 19) {
+      speedLimit = 100 / 3.6
+
+
+    }
+    else {
+      speedLimit = 120 / 3.6
+    }
+
+    timeLaps = 1500 / speedLimit
+
+    timeLaps
+
+  }
+
+  def timeToSeconds(timeStandard : Time): Double = {
+    val daysToSeconds = timeStandard.daysSinceEpoch * 24 * 3600
+    val hoursToSeconds = timeStandard.hours * 3600
+    val minutesToSeconds = timeStandard.minutes * 60
+
+    daysToSeconds + hoursToSeconds + minutesToSeconds + timeStandard.seconds
+
+  }
+  def calcTimeDifference(timeA : Time, timeB : Time) : Double = {
+    val secondsOfA = timeToSeconds(timeA)
+    val secondsOfB = timeToSeconds(timeB)
+
+    secondsOfB - secondsOfA
+  }
+
+
   def speedOffenders(observations: Seq[Observation]) : ArrayBuffer[SpeedOffender] = {
     val startTimeOfCar : mutable.Map[String,Time] = new mutable.HashMap()
     val result :  ArrayBuffer[SpeedOffender] = new ArrayBuffer()
     for(observation <- observations) {
-      // use result += elem to add elem
+      if(observation.cameraSet == "A")
+        {
+          startTimeOfCar += (observation.licensePlate -> observation.time)
+        }
+      if(observation.cameraSet == "B" && startTimeOfCar.contains(observation.licensePlate))
+        {
+          val registeredCarTime = startTimeOfCar(observation.licensePlate)
+          val timeLaps = calcTimeDifference(registeredCarTime, observation.time)
+          val timeLapslimit = calcTimeLapsLimit(observation.time)
+
+          if(timeLaps < timeLapslimit)
+            {
+              val speed = ((1500 / timeLaps) * 3.6).toInt
+              val offender = SpeedOffender(observation.licensePlate, speed)
+              result += offender
+            }
+
+
+
+        }
     }
 
     result
@@ -427,8 +476,30 @@ Use "new Array[Int](length)" to create a new int array
 Indication of length: 12 lines
 
    */
+
+  def partitionArray(targetArray : Array[Int], start : Int, end : Int, size : Int) : Array[Int] = {
+    val result = new Array[Int](size)
+
+    for(i <- start until end)
+    {
+      if(start > 0)
+        {
+          result(i - (targetArray.length / 2)) = targetArray(i)
+        }
+        else {
+        result(i) = targetArray(i)
+      }
+    }
+
+    result
+  }
   def splitArray(a : Array[Int]) : (Array[Int],Array[Int]) = {
-    null
+    val partA = partitionArray(a, 0, (a.length / 2), (a.length / 2))
+    val partB = partitionArray(a, (a.length / 2), (a.length), (a.length - (a.length / 2)))
+
+    val result = (partA, partB)
+
+        result
   }
 
 
@@ -467,7 +538,29 @@ Indication of length: 12 lines
 Indication of length: 15 lines
    */
   def mergeSortedArrays(a : Array[Int], b : Array[Int]) : Array[Int] = {
-    return null
+    var c = new Array[Int](a.length + b.length)
+    var i = 0
+    var j = 0
+    var k = 0
+
+    while (k < c.length)
+      {
+        if(i < a.length - 1 || j < b.length - 1) {
+          if (a(i) < b(j)) {
+            c(k) = a(i)
+            i += 1
+          }
+          else {
+            c(k) = b(j)
+            j += 1
+          }
+        }
+
+
+          println(c.mkString)
+        k += 1
+      }
+    c
   }
 
 
