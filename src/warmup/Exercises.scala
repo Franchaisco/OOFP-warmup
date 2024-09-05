@@ -537,46 +537,33 @@ Indication of length: 12 lines
 
 Indication of length: 15 lines
    */
-  def mergeSortedArrays(a : Array[Int], b : Array[Int]) : Array[Int] = {
-    var c = new Array[Int](a.length + b.length)
-    var i = 0
-    var j = 0
-    var k = 0
+  def mergeSortedArrays(a: Array[Int], b: Array[Int]): Array[Int] = {
+    var i, j, k = 0
+    val c = new Array[Int](a.length + b.length)
 
-    while (k < c.length)
-      {
-        if(i < a.length - 1 || j < b.length - 1) {
-          if (a(i) < b(j)) {
-            c(k) = a(i)
-            i += 1
-          }
-          else {
-            c(k) = b(j)
-            j += 1
-          }
-        }
-        else if(a.length > b.length)
-          {
-            c(c.length - 2) = b(b.length - 1)
-            c(c.length - 1) = a(a.length - 1)
-          }
-        else if(b.length > a.length)
-          {
-            c(c.length - 1) = b(b.length - 1)
-            c(c.length - 2) = a(a.length - 1)
-          }
-        else if(b.length == a.length)
-          {
-            if (a() < b(j)) {
-              c(k) = a(i)
-            }
-            else {
-              c(k) = b(j)
-            }
-          }
-          println(c.mkString)
-        k += 1
+    while (i < a.length && j < b.length) {
+      if (a(i) < b(j)) {
+        c(k) = a(i)
+        i += 1
       }
+      else {
+        c(k) = b(j)
+        j += 1
+      }
+      k += 1
+    }
+
+    while (i < a.length) {
+      c(k) = a(i)
+      k += 1
+      i += 1
+    }
+
+    while (j < b.length) {
+      c(k) = b(j)
+      k += 1
+      j += 1
+    }
     c
   }
 
