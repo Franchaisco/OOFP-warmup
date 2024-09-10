@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup.AverageGradeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-05T18:23:20" hostname="LAPTOP-68J58FIR" time="0.016">
+  <properties/>
+  <testcase name="testaverage0" classname="warmup.AverageGradeTests" time="0.01"/>
+  <testcase name="testaverage1" classname="warmup.AverageGradeTests" time="0.002"/>
+  <testcase name="testaverage2" classname="warmup.AverageGradeTests" time="0.002"/>
+  <system-out><![CDATA[14.0
+2
+7.0
+35.7
+6
+5.95
+59.099999999999994
+8
+7.387499999999999
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

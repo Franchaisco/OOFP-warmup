@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="warmup.IndexOfMaxTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-09-05T18:23:20" hostname="LAPTOP-68J58FIR" time="0.118">
+  <properties/>
+  <testcase name="max0" classname="warmup.IndexOfMaxTests" time="0.093"/>
+  <testcase name="max1" classname="warmup.IndexOfMaxTests" time="0.005"/>
+  <testcase name="max2" classname="warmup.IndexOfMaxTests" time="0.001"/>
+  <testcase name="max3" classname="warmup.IndexOfMaxTests" time="0.003"/>
+  <testcase name="max4" classname="warmup.IndexOfMaxTests" time="0.002"/>
+  <testcase name="max5" classname="warmup.IndexOfMaxTests" time="0.001"/>
+  <testcase name="max6" classname="warmup.IndexOfMaxTests" time="0.002"/>
+  <testcase name="max7" classname="warmup.IndexOfMaxTests" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="warmup.MergeSortedArraysTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-09-05T17:47:47" hostname="LAPTOP-68J58FIR" time="0.096">
+<testsuite name="warmup.MergeSortedArraysTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-09-05T18:23:20" hostname="LAPTOP-68J58FIR" time="0.02">
   <properties/>
-  <testcase name="merge0" classname="warmup.MergeSortedArraysTests" time="0.086"/>
-  <testcase name="merge1" classname="warmup.MergeSortedArraysTests" time="0.001"/>
-  <testcase name="merge2" classname="warmup.MergeSortedArraysTests" time="0.001"/>
-  <testcase name="merge3" classname="warmup.MergeSortedArraysTests" time="0.002"/>
-  <testcase name="merge4" classname="warmup.MergeSortedArraysTests" time="0.001"/>
+  <testcase name="merge0" classname="warmup.MergeSortedArraysTests" time="0.003"/>
+  <testcase name="merge1" classname="warmup.MergeSortedArraysTests" time="0.003"/>
+  <testcase name="merge2" classname="warmup.MergeSortedArraysTests" time="0.003"/>
+  <testcase name="merge3" classname="warmup.MergeSortedArraysTests" time="0.003"/>
+  <testcase name="merge4" classname="warmup.MergeSortedArraysTests" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

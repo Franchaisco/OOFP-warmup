@@ -70,9 +70,6 @@ object Exercises {
             totalGrades = totalGrades + 1
           }
       }
-      println(gradesAgg)
-      println(totalGrades)
-      println(gradesAgg / totalGrades)
       gradesAgg / totalGrades
   }
 
@@ -595,8 +592,27 @@ Indication of length: 15 lines
 Indication of length: 5 lines
    */
 
-  def mergeSort(a : Array[Int]) : Array[Int] = {
-    null
+  def mergeSort(a: Array[Int]): Array[Int] = {
+    if (a.length < 2) {
+      a
+    }
+    else {
+      val cut = a.length / 2
+      val partA = new Array[Int](cut)
+      val partB = new Array[Int](a.length - cut)
+
+      for (i <- 0 until a.length / 2) {
+        partA(i) = a(i)
+      }
+      for (i <- 0 until (a.length - cut)) {
+        partB(i) = a(cut + i)
+      }
+
+      val sortedA = mergeSort(partA)
+      val sortedB = mergeSort(partB)
+
+      mergeSortedArrays(sortedA, sortedB)
+    }
   }
 
 
